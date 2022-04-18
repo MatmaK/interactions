@@ -1,9 +1,9 @@
-package com.pingr.Chassis.application;
+package com.pingr.Interactions.application;
 
-import com.pingr.Chassis.core.Account;
-import com.pingr.Chassis.core.services.SynchronizeAccount;
-import com.pingr.Chassis.core.events.AccountCreatedEvent;
-import com.pingr.Chassis.core.events.AccountDeletedEvent;
+import com.pingr.Interactions.core.Account;
+import com.pingr.Interactions.core.services.SynchronizeAccount;
+import com.pingr.Interactions.core.events.AccountCreatedEvent;
+import com.pingr.Interactions.core.events.AccountDeletedEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;

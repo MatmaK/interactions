@@ -1,13 +1,13 @@
-package com.pingr.Chassis;
+package com.pingr.Interactions;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChassisApplication {
+public class InteractionsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ChassisApplication.class, args);
+		SpringApplication.run(InteractionsApplication.class, args);
 	}
 
 }

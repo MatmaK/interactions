@@ -1,71 +1,22 @@
-# Service Template
+# Pingr project
 
-This is a basic service [Service Template][template] for SpringBoot services within Pingr.
+This is a Twitter based project for microservices concepts studies.
 
-## How to use it
+It's composed by:
+- [Connections microservice](https://github.com/MatmaK/connections)
+- [Content microservice](https://github.com/MatmaK/content)
+- [Pings microservice](https://github.com/MatmaK/pings)
+- [Accounts microservice](https://github.com/MatmaK/accounts)
 
-### Remove Chassis placeholders
+I am following this modeling to develop the project: [Pingr modeling](https://cursosextensao.usp.br/pluginfile.php/793547/mod_resource/content/1/Pingr%20-%20Event%20Storming.pdf)  
 
-> For further information on Chassis pattern, check [this page][chassis]
+## Interactions microservice
 
-The code boilerplate contains a few information that **must be replaced** with real values. To identify them, run on the root directory of this chassis:
+This service controls the interactions between users and pings (posts). You can pong a ping (just like a retweet) and you can like a ping. 
 
-```sh
-grep -i "Chassis" . -R
-```
-
-As of the date this document is being written, the spots are:
-
-```plain
-./src/test/java/com/pingr/Chassis/ChassisApplicationTests.java:package com.pingr.Chassis;
-./src/test/java/com/pingr/Chassis/ChassisApplicationTests.java:class ChassisApplicationTests {
-
-./src/main/java/com/pingr/Chassis/ChassisApplication.java:package com.pingr.Chassis;
-./src/main/java/com/pingr/Chassis/ChassisApplication.java:public class ChassisApplication {
-./src/main/java/com/pingr/Chassis/ChassisApplication.java:		SpringApplication.run(ChassisApplication.class, args);
-
-./src/main/resources/application.yml:      group-id: CHASSIS-GROUP-ID
-./src/main/resources/application.yml:    url: jdbc:postgresql://localhost:CHASSIS-PG-HOST-PORT/CHASSIS-DB-NAME
-./src/main/resources/application.yml:  port: CHASSIS-PORT
-
-./pom.xml:	<artifactId>Chassis</artifactId>
-./pom.xml:	<name>Chassis</name>
-./pom.xml:	<description>Chassis for creating SpringBoot services in Pingr</description>
-
-./docker-compose.yaml:  CHASSIS-PG-CONTAINER-NAME:
-./docker-compose.yaml:      - CHASSIS-PG-HOST-PORT:5432
-```
-
-Also, don't forget to change and refactor some structural aspects, such as directory and classes names, in particular:
-
-```plain
-- `./src/main/java/com.pingr.Chassis` package
-- `./src/main/java/com.pingr.Chassis/ChassisApplication.java` class
-- `./src/test/java/com.pingr.Chassis` package
-- `./src/test/java/com.pingr.Chassis/ChassisApplicationTest.java` class
-```
-
-### Edit business logic boilerplate
-
-This template comes with basic core modelling for listening to Account creation and deletion.
-As of the date this document is being written, the spots are:
-
-```plain
-.
-├── application
-|   ├── KafkaConsumerConfig.java
-|   └── KafkaConsumerService.java
-└── core
-    ├── Account.java
-    ├── AccountRepository.java
-    ├── events
-    │   ├── AccountCreatedEvent.java
-    │   └── AccountDeletedEvent.java
-    └── services
-        └── SynchronizeAccount.java
-```
+In addition, it'll be possible to get how many likes and pongs a ping has.
 
 
+### Available routes:
 
-[chassis]: https://microservices.io/patterns/microservice-chassis.html
-[template]: https://microservices.io/patterns/service-template.html
+Soon...
